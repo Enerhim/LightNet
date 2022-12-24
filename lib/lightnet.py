@@ -52,7 +52,7 @@ class NeuralNetwork:
         # self.biases = np.array(self.biases)
                         
     def activation(self, x):
-        return 1 / (1 + math.exp(-x))
+        return  1 / (1 + math.exp(-x))
             
 
     def feed_forward_once(self, input_):
@@ -76,10 +76,6 @@ class NeuralNetwork:
         # Add the activation function for that specific layer 
         self.act_functions.append(activation)    
         
-network = NeuralNetwork()
-network.add_layer(784, "sigmoid")
-network.add_layer(16, "sigmoid")
-network.add_layer(16, "sigmoid")
-network.add_layer(10, "sigmoid")
-network.init_params()
-print(network.feed_forward_once(np.random.randn(1, 784)) )
+    def cost_function(self):
+        pass
+        
